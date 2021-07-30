@@ -33,6 +33,10 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  
+  # クラウドIDEの場合は以下をお使いください
+  host = '293888b2c9364582b785469586dafdb5.vfs.cloud9.us-east-2.amazonaws.com'     # クラウドIDE
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
   config.action_mailer.perform_caching = false
 
